@@ -745,6 +745,10 @@
  }
 
  @media (max-width: 768px) {
+     .logo {
+         display: none;
+     }
+
      .mobile-menu-btn {
          display: flex;
      }
