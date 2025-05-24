@@ -306,7 +306,23 @@
     <div class="container">
       <h2 class="section-title fade-in">Get In Touch</h2>
       <div class="contact-content fade-in">
-        <form class="contact-form">
+        <!-- <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form> -->
+        <form class="contact-form" action="https://formsubmit.co/hakam.h.qadi@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -321,6 +337,7 @@
           </div>
           <button type="submit" class="submit-btn">Send Message</button>
         </form>
+
         <div class="contact-info">
           <h3>Let's Connect</h3>
           <div class="contact-item">
@@ -422,23 +439,23 @@
     });
 
     // Form submission
-    document.querySelector('.contact-form').addEventListener('submit', function (e) {
-      e.preventDefault();
+    // document.querySelector('.contact-form').addEventListener('submit', function (e) {
+    //   e.preventDefault();
 
-      // Get form data
-      const formData = new FormData(this);
-      const name = formData.get('name');
-      const email = formData.get('email');
-      const message = formData.get('message');
+    //   // Get form data
+    //   const formData = new FormData(this);
+    //   const name = formData.get('name');
+    //   const email = formData.get('email');
+    //   const message = formData.get('message');
 
-      // Simple validation
-      if (name && email && message) {
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        this.reset();
-      } else {
-        alert('Please fill in all fields.');
-      }
-    });
+    //   // Simple validation
+    //   if (name && email && message) {
+    //     alert('Thank you for your message! I\'ll get back to you soon.');
+    //     this.reset();
+    //   } else {
+    //     alert('Please fill in all fields.');
+    //   }
+    // });
 
     // Add some interactive hover effects
     document.querySelectorAll('.project-card').forEach(card => {
