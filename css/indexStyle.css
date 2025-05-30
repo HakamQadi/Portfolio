@@ -742,9 +742,48 @@
      .about-image img {
          max-width: 250px;
      }
+
+     .resume-button-mobile {
+         display: inline-block;
+     }
+ }
+
+ .resume-button-mobile {
+     display: none;
+     margin-top: 1rem;
+     padding: 1rem 2rem;
+     background: rgba(255, 255, 255, 0.9);
+     color: var(--primary-color);
+     text-decoration: none;
+     border-radius: 50px;
+     font-weight: 600;
+     transition: all 0.3s ease;
+     backdrop-filter: blur(10px);
+     border: 2px solid rgba(255, 255, 255, 0.5);
+     animation: fadeInUp 1s ease 0.8s both;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .resume-button-mobile:hover {
+     background: rgba(255, 255, 255, 1);
+     transform: translateY(-2px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
  }
 
  @media (max-width: 768px) {
+     .resume-button-mobile {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 1rem;
+         align-self: center;
+         max-width: 250px;
+     }
+
+     .hero-content {
+         justify-items: center;
+     }
+
      .logo {
          display: none;
      }
