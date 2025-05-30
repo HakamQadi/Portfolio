@@ -390,6 +390,12 @@
       <p>Built with passion and code ❤️</p>
     </div>
   </footer>
+  <button id="scrollToTop" class="scroll-to-top" title="Go to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </button>
 
   <script>
     document.querySelectorAll('.container-experience-title').forEach(title => {
@@ -492,6 +498,25 @@
         mobileMenuBtn.classList.remove('active');
         navLinks.classList.remove('active');
       }
+    });
+    // Scroll to Top Button Functionality
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Smooth scroll to top when button is clicked
+    scrollToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   </script>
 </body>
